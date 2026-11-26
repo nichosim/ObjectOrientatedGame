@@ -27,12 +27,10 @@ class Player {
 
   void movePlayer() {
     
-    //if(keyPressed == 'SHIFT') {
-      //acceleration++;
-     // constrain(10); //fix this later
-    //}
   }
-
+  
   void playerChecksEdges() {
+    
+    //use constrain to stop player from going off edge
   }
 }

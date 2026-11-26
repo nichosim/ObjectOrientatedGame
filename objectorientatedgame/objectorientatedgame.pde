@@ -1,4 +1,6 @@
-Table table; 
+boolean isPlaying = true;
+
+Table table;
 OrderTable orderTable;
 Player player;
 NPC npc;
@@ -7,7 +9,7 @@ NPC npc;
 
 void setup() {
   size(600, 700);
-  
+
   table = new Table();
   orderTable = new OrderTable();
   player = new Player();
@@ -15,15 +17,24 @@ void setup() {
 }
 
 void draw() {
-  background(255);
-  
-  //enviornment
-  table.displayTable();
-  orderTable.displayOrderTable();
-  
-  //player
-  player.displayPlayerRegular();
-  
-  //NPC
-  npc.displayNPC();
+  if (isPlaying == true) {
+
+    background(255);
+
+    //enviornment
+    table.displayTable();
+    orderTable.displayOrderTable();
+
+    //player
+    player.displayPlayerRegular();
+
+    //NPC
+    npc.displayNPC();
+  } else {
+    background(0);
+  }
+}
+
+void mousePressed() {
+  isPlaying = !isPlaying;
 }
