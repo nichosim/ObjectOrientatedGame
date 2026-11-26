@@ -20,7 +20,5 @@ void displayTable() {
   ellipse(width/2, height/2 - 40, 20, 20);
   //Bottom Chair
   ellipse(width/2, height/2 + 40, 20, 20);
-  
-  
 }
 }
